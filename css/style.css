@@ -1,0 +1,42 @@
+/* Animate subtle shifting gradient background */
+body {
+  background-size: 200% 200%;
+  animation: bgShift 20s ease infinite;
+}
+
+/* Keyframes for background gradient shifting */
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Accessibility: Focus outline for keyboard users */
+input:focus, button:focus {
+  outline-offset: 3px;
+  outline-color: #4f46e5; /* Tailwind Indigo-600 */
+  outline-style: solid;
+  outline-width: 3px;
+}
+
+/* Custom scrollbar for WebKit */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(79, 70, 229, 0.6);
+  border-radius: 4px;
+}
+
+/* Responsive text size for result */
+#weatherResult p, #weatherResult h2 {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
